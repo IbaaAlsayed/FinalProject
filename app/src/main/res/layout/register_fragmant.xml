@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="712dp"
+        android:layout_marginStart="268dp"
+        android:contentDescription="@string/todo1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/texture_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-27dp">
+
+
+        <TextView
+            android:id="@+id/AppName"
+            style="@style/h3"
+            android:layout_width="94dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="6dp"
+            android:text="@string/kido"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/theReg"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/reg"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.311"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/AppName" />
+
+        <EditText
+            android:id="@+id/firstname"
+            style="@style/editText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            android:layout_marginTop="24dp"
+            android:autofillHints=""
+            android:hint="@string/first_name"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/theReg"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/firstname"
+            style="@style/editText"
+            android:hint="@string/last_name"
+            android:inputType="text"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            tools:ignore="NotSibling,VisualLintTextFieldSize" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/lastname"
+            style="@style/editText"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            tools:ignore="NotSibling,VisualLintTextFieldSize" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            style="@style/editText"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            tools:ignore="NotSibling,VisualLintTextFieldSize" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/buttonReg"
+            style="@style/blueButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/meduimButtonHeight"
+            android:layout_marginTop="20dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

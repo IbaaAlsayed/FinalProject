@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="start">start</string>
+    <string name="rightAddress">The Right Address For Shopping Any thing</string>
+    <string name="todo1">TODO</string>
+    <string name="register">Register</string>
+    <string name="login">login</string>
+    <string name="kido">Kido</string>
+    <string name="account">Don\'t have an account register?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Click here if you Forget password! </string>
+    <string name="reg">Let\'s Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="we_will_send_you_the_password_reset_link_to_your_email">We will send you the password reset link to your email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="scotch_premium">Scotch Premium</string>
+    <string name="_2000">$2000</string>
+    <string name="_1600">$1600</string>
+    <string name="see_product">See product</string>
+    <string name="todo">TODO</string>
+    <string name="text_cart">Add to cart</string>
+</resources>

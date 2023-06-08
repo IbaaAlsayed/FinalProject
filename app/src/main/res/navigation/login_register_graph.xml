@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_graph"
+    app:startDestination="@id/introductionFragment">
+
+    <fragment
+        android:id="@+id/fragmentAccountOption"
+        android:name="com.example.finalproject.fregmant.FragmentAccountOption"
+        android:label="FragmentAccountOption"
+        tools:layout="@layout/fragment_account_options">
+        <action
+            android:id="@+id/action_fragmentAccountOption_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_fragmentAccountOption_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.finalproject.fregmant.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragmant">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.finalproject.fregmant.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register_fragmant">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="com.example.finalproject.fregmant.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/introduction_fragmant">
+        <action
+            android:id="@+id/action_introductionFragment_to_fragmentAccountOption"
+            app:destination="@id/fragmentAccountOption" />
+    </fragment>
+</navigation>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    android:foregroundTint="#00FFFFFF"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/roudedImage"
+        android:layout_width="345dp"
+        android:layout_height="374dp"
+        android:rotationX="4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="171dp"
+        android:layout_height="79dp"
+        android:backgroundTint="@android:color/white"
+        android:paddingLeft="20dp"
+        android:paddingTop="6dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="6dp"
+        android:text="@string/start"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.347"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins_thin"
+        android:text="Kido shop"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roudedImage"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

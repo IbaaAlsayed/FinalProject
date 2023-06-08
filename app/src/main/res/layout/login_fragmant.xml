@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/AppName"
+            style="@style/h3"
+            android:layout_width="94dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="112dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="6dp"
+            android:text="@string/kido"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/theLogin"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/AppName" />
+
+        <TextView
+            android:id="@+id/donthaveaccount"
+            style="@style/h2"
+            android:layout_width="294dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/account"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/theLogin"
+
+
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/mailLogin"
+            style="@style/editText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            android:layout_marginTop="50dp"
+            android:autofillHints=""
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/donthaveaccount"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/passwordLogin"
+            style="@style/editText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittextHeight"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/mailLogin"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/forgetpassword"
+            style="@style/h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/forget_password"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/passwordLogin" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/buttonReg"
+            style="@style/blueButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/meduimButtonHeight"
+            android:layout_marginTop="20dp"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/forgetpassword"
+            app:layout_constraintVertical_bias="0.02"
+            app:spinning_bar_color="@color/white"
+            tools:ignore="DuplicateSpeakableTextCheck,ExtraText,VisualLintButtonSize" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
